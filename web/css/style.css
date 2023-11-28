@@ -1703,6 +1703,12 @@ ol {
 h2.typoh2{
     margin: 0 0 10px;
 }
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+	background-color: #FA1818;
+	border-color: #FA1818;
+}
+
 @media (max-width:768px){
 	.grid_5 {
 		padding: 0 0 1em;
