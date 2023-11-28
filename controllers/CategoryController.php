@@ -15,12 +15,13 @@ class CategoryController extends AppController
         $category = Category::findOne($id);
         if (empty($category)) {
             throw new NotFoundHttpException('Такой категории нет');
-
-        } else{
-            $products = Product::find()->where(['category_id'=>$id])->all();
-           return $this->render('view', compact( 'products','category'));
-
         }
+        $this->setMeta("{$category->title} :: " . \Yii::$app->name, $category->keywords, $category->description);
+
+        $products = Product::find()->where(['category_id'=>$id])->all();
+        return $this->render('view', compact( 'products','category'));
+
+
     }
 
 }
