@@ -1709,6 +1709,15 @@ h2.typoh2{
 	border-color: #FA1818;
 }
 
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.snipcart-thumb img{
+	max-width: 140px;
+}
+
 @media (max-width:768px){
 	.grid_5 {
 		padding: 0 0 1em;
